@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <p class="eyebrow">A little money log</p>
+      <h1>My expenses</h1>
+      <p class="intro">Keep track of the small things that add up.</p>
+    </header>
+
+    <section class="total-card" aria-label="Total spent">
+      <span>Total spent</span>
+      <strong id="total">₹0</strong>
+    </section>
+
+    <section class="form-card">
+      <h2>Add an expense</h2>
+      <form id="expense-form">
+        <label for="title">What was it?</label>
+        <input id="title" name="title" type="text" placeholder="e.g. chai and snacks" maxlength="50" required>
+
+        <div class="form-row">
+          <div>
+            <label for="amount">Amount (₹)</label>
+            <input id="amount" name="amount" type="number" min="1" step="1" placeholder="120" required>
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+        </div>
+        <button type="submit">Add to list</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <div class="list-heading">
+        <h2>Recent expenses</h2>
+        <span id="count">0 items</span>
+      </div>
+      <ul id="expense-list" class="expense-list"></ul>
+      <p id="empty-message" class="empty-message">Nothing here yet. Add your first expense above.</p>
+    </section>
+    <footer>Saved on this device</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
